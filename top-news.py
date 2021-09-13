@@ -14,9 +14,20 @@ response_text = f.read()
 
 soup = BeautifulSoup(response_text, 'html.parser')
 
-title_parents = soup.find_all(attrs={'class': 'top-news-item-content-title'})
+top_news_parents = soup.find_all(attrs={'class': 'top-news-item-content'})
 
-for tp in title_parents:
-    title_anchor = tp.find('a')
-    print(title_anchor.text.strip())
+news_list = []
+for parent in top_news_parents:
+    news_anchor = parent.find('a')
+    news_title = news_anchor.text.strip()
+
+    news_time_span = parent.find('span', attrs={'class': 'publishTime'})
+    news_time = news_time_span.text.strip()
+
+    category_span = parent.find('span', attrs={'class': 'property'})
+    category = category_span.text.strip()
+
+    print(news_title)
+    print(news_time)
+    print(category)
     print('---------')

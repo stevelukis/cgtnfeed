@@ -1,7 +1,9 @@
-# CGTN Web Scrapper
+# cgtn-feed
+A python package which collects information from CGTN (China Global TV Network)
 
+## Background
 CGTN is a international media from China. 
-Their website is very slow and laggy. It is probably because the servers are in China,
+Their website is very slow. It is probably because the servers are in China,
 there are a lot of animations on their website, and the size of the image is very large.
 
 This project is a web scrapper that will collect important information from the website

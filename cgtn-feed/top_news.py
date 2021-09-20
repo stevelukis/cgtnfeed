@@ -8,14 +8,6 @@ def get_top_news():
     response = requests.get(url)
     response_text = response.text
 
-    # These two lines save the response as a cache
-    # with open('cgtn_home.html', 'w', encoding='utf8') as f:
-    #     f.write(response_text)
-
-    # These two lines read the response from the cache file
-    # f = open('cgtn_home.html', 'r', encoding='utf8')
-    # response_text = f.read()
-
     soup = BeautifulSoup(response_text, 'html.parser')
 
     top_news_parents = soup.find_all(attrs={'class': 'top-news-item-content'})

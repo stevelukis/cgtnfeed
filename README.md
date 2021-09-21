@@ -1,4 +1,4 @@
-# cgtn-feed
+# cgtnfeed
 
 A python package which collects information from CGTN (China Global TV Network)
 
